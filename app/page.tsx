@@ -10,7 +10,7 @@ export default function Home() {
           width={0}
           height={0}
           sizes="100vw"
-          className="flex h-auto w-full px-5 py-7 sm:hidden"
+          className="flex h-auto w-full px-5 py-7 md:hidden"
         />
 
         <Image
@@ -19,7 +19,7 @@ export default function Home() {
           width={0}
           height={0}
           sizes="100vw"
-          className="hidden h-auto w-full sm:flex"
+          className="hidden h-auto w-full md:flex"
         />
       </div>
     </>
