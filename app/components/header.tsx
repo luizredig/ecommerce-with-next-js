@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 const Header = () => {
   return (
     <>
-      <Card className="flex h-[85px] w-full flex-row items-center justify-between px-8 md:px-32">
+      <Card className="flex h-[85px] w-full flex-row items-center justify-between px-8 sm:px-32">
         <Sheet>
           <SheetTrigger asChild>
             <Button size={"icon"} variant={"outline"}>
