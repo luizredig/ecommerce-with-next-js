@@ -14,6 +14,7 @@ const Home = async () => {
           width={0}
           height={0}
           sizes="100vw"
+          priority
           className="flex h-auto w-full px-5 py-7 md:hidden"
         />
 
@@ -23,6 +24,7 @@ const Home = async () => {
           width={0}
           height={0}
           sizes="100vw"
+          priority
           className="hidden h-auto w-full md:flex"
         />
 
