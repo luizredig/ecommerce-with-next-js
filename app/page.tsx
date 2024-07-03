@@ -29,7 +29,7 @@ const Home = async () => {
         />
 
         {categories.length > 0 && (
-          <div className="grid grid-cols-2 grid-rows-3 gap-3 overflow-x-scroll px-5 md:flex md:items-center md:gap-3 lg:justify-center [&::-webkit-scrollbar]:hidden">
+          <div className="grid w-full grid-cols-2 grid-rows-3 gap-3 overflow-x-scroll px-5 md:flex md:items-center md:gap-3 md:py-5 lg:justify-between [&::-webkit-scrollbar]:hidden">
             {categories.map((category) => (
               <CategoryItem key={category.id} category={category} />
             ))}
