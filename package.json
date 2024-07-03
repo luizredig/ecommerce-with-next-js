@@ -9,6 +9,9 @@
     "lint": "next lint",
     "prepare": "husky"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "dependencies": {
     "@prisma/client": "^5.16.1",
     "@radix-ui/react-dialog": "^1.0.5",
