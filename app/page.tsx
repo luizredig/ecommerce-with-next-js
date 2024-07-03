@@ -1,6 +1,10 @@
 import Image from "next/image";
+import { prismaClient } from "./lib/prisma";
+import CategoryItem from "./components/categoryItem";
 
-export default function Home() {
+const Home = async () => {
+  const categories = await prismaClient.category.findMany({});
+
   return (
     <>
       <div>
@@ -21,7 +25,17 @@ export default function Home() {
           sizes="100vw"
           className="hidden h-auto w-full md:flex"
         />
+
+        {categories.length > 0 && (
+          <div className="grid grid-cols-2 grid-rows-3 gap-3 overflow-x-scroll px-5 md:flex md:items-center md:gap-3 lg:justify-center [&::-webkit-scrollbar]:hidden">
+            {categories.map((category) => (
+              <CategoryItem key={category.id} category={category} />
+            ))}
+          </div>
+        )}
       </div>
     </>
   );
-}
+};
+
+export default Home;
