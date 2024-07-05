@@ -14,7 +14,7 @@ const Banner = ({ src, alt, className }: BannerProps) => {
       alt={alt}
       width={0}
       height={0}
-      sizes="100vw"
+      sizes="100vw object-contain"
       priority
       className={cn(className)}
     />
