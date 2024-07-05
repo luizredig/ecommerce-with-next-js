@@ -17,7 +17,7 @@ const Section = ({ title, products, href }: SectionProps) => {
         <div className="flex flex-row items-center justify-between px-5 md:px-24">
           <p className="text-xl font-bold uppercase">{title}</p>
 
-          <Link href={`/${href}`}>
+          <Link href={href}>
             <Button variant="link" className="flex flex-row gap-1 pr-0">
               <p>View all</p>
 
