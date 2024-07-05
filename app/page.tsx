@@ -12,7 +12,16 @@ const Home = async () => {
         gt: 0,
       },
     },
-    take: 7,
+    take: 6,
+  });
+
+  const keyboards = await prismaClient.product.findMany({
+    where: {
+      category: {
+        slug: "keyboards",
+      },
+    },
+    take: 6,
   });
 
   return (
@@ -53,6 +62,8 @@ const Home = async () => {
             className="hidden h-auto w-1/2 md:flex"
           />
         </div>
+
+        <Section title="Keyboards" products={keyboards} href="/keyboards" />
       </div>
     </>
   );
