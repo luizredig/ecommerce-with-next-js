@@ -37,19 +37,19 @@ const Header = () => {
 
         <div className="absolute left-1/2 top-1/2 hidden h-full -translate-x-1/2 -translate-y-1/2 transform flex-row items-center justify-center gap-4 md:flex">
           <Link href={"/"}>
-            <p>Início</p>
+            <p>Home</p>
           </Link>
 
           <Separator orientation="vertical" className="h-5 w-1 rounded-full" />
 
           <Link href={"/catalog"}>
-            <p>Catálogo</p>
+            <p>Catalog</p>
           </Link>
 
           <Separator orientation="vertical" className="h-5 w-1 rounded-full" />
 
           <Link href={"/deals"}>
-            <p>Ofertas</p>
+            <p>Deals</p>
           </Link>
         </div>
 
