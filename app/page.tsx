@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { prismaClient } from "./lib/prisma";
 import CategoryItem from "./components/categoryItem";
 import Section from "./components/section";
@@ -18,11 +17,11 @@ const Home = async () => {
 
   return (
     <>
-      <div>
+      <div className="flex flex-col gap-10">
         <Banner
           src={"/mobile-first-banner.png"}
           alt="Até 55% de desconto só este mês."
-          className="flex h-auto w-full px-5 py-7 md:hidden"
+          className="flex h-auto w-full px-5 pt-5 md:hidden"
         />
 
         <Banner
@@ -32,7 +31,7 @@ const Home = async () => {
         />
 
         {categories.length > 0 && (
-          <div className="grid w-full grid-cols-2 grid-rows-3 gap-3 overflow-x-scroll px-5 py-5 md:flex md:items-center md:gap-3 md:px-24 lg:justify-between [&::-webkit-scrollbar]:hidden">
+          <div className="grid w-full grid-cols-2 grid-rows-3 gap-3 overflow-x-scroll px-5 md:flex md:items-center md:gap-3 md:px-24 lg:justify-between [&::-webkit-scrollbar]:hidden">
             {categories.map((category) => (
               <CategoryItem key={category.id} category={category} />
             ))}
@@ -41,7 +40,7 @@ const Home = async () => {
 
         <Section title="Deals" products={deals} href="/deals" />
 
-        <div className="flex w-full flex-row gap-9 px-5 py-10 md:px-24">
+        <div className="flex w-full flex-row gap-9 px-5 md:px-24">
           <Banner
             src="/mouses-banner.png"
             alt="Até 55% de desconto em mouses!"
