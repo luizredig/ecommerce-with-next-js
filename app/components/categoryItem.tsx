@@ -16,7 +16,7 @@ const CategoryItem = ({ category }: CategoryItemProps) => {
       >
         <Button
           variant={"outline"}
-          className="flex w-full flex-row items-center justify-center gap-2"
+          className="flex w-full flex-row items-center justify-center gap-1 px-1 sm:px-6"
         >
           {CATEGORY_ICON[category.slug as keyof typeof CATEGORY_ICON]}
 
