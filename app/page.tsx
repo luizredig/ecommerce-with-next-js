@@ -12,7 +12,7 @@ const Home = async () => {
         gt: 0,
       },
     },
-    take: 6,
+    take: 7,
   });
 
   return (

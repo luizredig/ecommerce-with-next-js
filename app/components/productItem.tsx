@@ -10,9 +10,9 @@ interface ProductItemProps {
 const ProductItem = ({ product }: ProductItemProps) => {
   return (
     <>
-      <div className="flex min-w-[180px] max-w-[180px] flex-col gap-5">
+      <div className="flex min-w-[177px] max-w-[177px] flex-col gap-5">
         {/* Image */}
-        <div className="relative flex min-h-[180px] w-full min-w-[180px] items-center justify-center rounded-lg bg-muted">
+        <div className="relative flex min-h-[177px] w-full min-w-[177px] items-center justify-center rounded-lg bg-muted">
           <Badge className="absolute left-2 top-2 flex max-h-5 flex-row p-2">
             <ArrowDownIcon size={16} />
 
