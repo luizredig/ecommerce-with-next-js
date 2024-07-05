@@ -40,6 +40,20 @@ const Home = async () => {
         )}
 
         <Section title="Deals" products={deals} href="/deals" />
+
+        <div className="flex w-full flex-row gap-9 px-5 py-10 md:px-24">
+          <Banner
+            src="/mouses-banner.png"
+            alt="Até 55% de desconto em mouses!"
+            className="flex h-auto w-full md:w-1/2"
+          />
+
+          <Banner
+            src="/headsets-banner.png"
+            alt="Até 55% de desconto em teclados!"
+            className="hidden h-auto w-1/2 md:flex"
+          />
+        </div>
       </div>
     </>
   );
