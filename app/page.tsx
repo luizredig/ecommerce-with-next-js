@@ -58,12 +58,24 @@ const Home = async () => {
 
           <Banner
             src="/headsets-banner.png"
-            alt="Até 55% de desconto em teclados!"
+            alt="Até 55% de desconto em fones!"
             className="hidden h-auto w-1/2 md:flex"
           />
         </div>
 
         <Section title="Keyboards" products={keyboards} href="/keyboards" />
+
+        <Banner
+          src="/delivery-banner.png"
+          alt="Frete grátis para todo o Brasil!"
+          className="hidden h-auto w-full px-5 md:flex md:px-24"
+        />
+
+        <Banner
+          src="/headsets-banner.png"
+          alt="Até 55% de desconto em fones de ouvido!"
+          className="flex h-auto w-full px-5 md:hidden"
+        />
       </div>
     </>
   );
