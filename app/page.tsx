@@ -1,9 +1,19 @@
 import Image from "next/image";
 import { prismaClient } from "./lib/prisma";
 import CategoryItem from "./components/categoryItem";
+import Section from "./components/section";
 
 const Home = async () => {
   const categories = await prismaClient.category.findMany({});
+
+  const deals = await prismaClient.product.findMany({
+    where: {
+      discountPercentage: {
+        gt: 0,
+      },
+    },
+    take: 6,
+  });
 
   return (
     <>
@@ -35,6 +45,8 @@ const Home = async () => {
             ))}
           </div>
         )}
+
+        <Section title="Deals" products={deals} href="/deals" />
       </div>
     </>
   );
