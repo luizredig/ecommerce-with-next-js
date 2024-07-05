@@ -42,7 +42,13 @@ const ProductItem = ({ product }: ProductItemProps) => {
                 {new Intl.NumberFormat("en-US", {
                   style: "currency",
                   currency: "USD",
-                }).format(Number(product.basePrice))}
+                }).format(
+                  Number(
+                    Number(product.basePrice) -
+                      (Number(product.basePrice) * product.discountPercentage) /
+                        100,
+                  ),
+                )}
               </p>
 
               <p className="truncate text-sm text-gray-600 line-through">
