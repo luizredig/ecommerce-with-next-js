@@ -51,7 +51,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
                 )}
               </p>
 
-              <p className="truncate text-sm text-gray-600 line-through">
+              <p className="truncate text-sm text-[#525252] line-through">
                 {new Intl.NumberFormat("en-US", {
                   style: "currency",
                   currency: "USD",
