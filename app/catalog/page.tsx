@@ -8,7 +8,7 @@ const Page = async () => {
 
   return (
     <>
-      <div className="flex flex-col gap-8 px-5 pb-10 pt-5 md:px-24">
+      <div className="flex h-screen w-full flex-col gap-8 px-5 pb-10 pt-5 md:px-24">
         <Badge
           variant={"outline"}
           className="flex w-fit flex-row items-center justify-center gap-1 border-2 border-primary py-1"
