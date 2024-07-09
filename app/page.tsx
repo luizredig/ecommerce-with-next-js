@@ -47,7 +47,7 @@ const Home = async () => {
           </div>
         )}
 
-        <Section title="Deals" products={deals} href="/deals" />
+        <Section title="Deals" products={deals} href="/products/deals" />
 
         <div className="flex w-full flex-row gap-9 px-5 md:px-24">
           <Banner
@@ -63,7 +63,11 @@ const Home = async () => {
           />
         </div>
 
-        <Section title="Keyboards" products={keyboards} href="/keyboards" />
+        <Section
+          title="Keyboards"
+          products={keyboards}
+          href="/products/keyboards"
+        />
 
         <Banner
           src="/delivery-banner.png"
