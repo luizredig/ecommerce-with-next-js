@@ -8,7 +8,7 @@ import { Separator } from "./ui/separator";
 const Header = () => {
   return (
     <>
-      <Card className="fixed z-10 flex h-20 w-full flex-row items-center justify-between rounded-none border-x-0 border-t-0 bg-[#000000d1] px-5 backdrop-blur-lg backdrop-filter md:h-28 md:px-24">
+      <Card className="fixed z-10 flex h-20 w-full flex-row items-center justify-between rounded-none border-x-0 border-t-0 bg-background/85 px-5 backdrop-blur-lg backdrop-filter md:h-28 md:px-24">
         <Sheet>
           <SheetTrigger asChild>
             <Button
