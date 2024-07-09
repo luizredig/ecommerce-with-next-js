@@ -1,6 +1,6 @@
+import { Badge } from "@/app/components/ui/badge";
+import { prismaClient } from "@/app/lib/prisma";
 import { GripIcon } from "lucide-react";
-import { Badge } from "../components/ui/badge";
-import { prismaClient } from "../lib/prisma";
 import CatalogItem from "../components/catalogItem";
 
 const Page = async () => {
