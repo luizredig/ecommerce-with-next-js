@@ -26,7 +26,7 @@ const Home = async () => {
 
   return (
     <>
-      <div className="mb-10 flex flex-col gap-10">
+      <div className="mb-10 flex h-full flex-col gap-10">
         <Banner
           src={"/mobile-first-banner.png"}
           alt="Até 55% de desconto só este mês."
