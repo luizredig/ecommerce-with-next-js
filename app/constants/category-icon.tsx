@@ -5,6 +5,7 @@ import {
   SquareIcon,
   SpeakerIcon,
   MouseIcon,
+  PercentIcon,
 } from "lucide-react";
 
 export const CATEGORY_ICON = {
@@ -14,4 +15,5 @@ export const CATEGORY_ICON = {
   mousepads: <SquareIcon size={16} />,
   speakers: <SpeakerIcon size={16} />,
   mouses: <MouseIcon size={16} />,
+  deals: <PercentIcon size={16} />,
 };
