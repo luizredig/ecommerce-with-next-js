@@ -1,8 +1,8 @@
 import { Product } from "@prisma/client";
-import ProductItem from "./productItem";
 import { Button } from "./ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
+import DynamicProductRow from "./dynamicProductRow";
 
 interface SectionProps {
   title: string;
@@ -26,11 +26,7 @@ const Section = ({ title, products, href }: SectionProps) => {
           </Link>
         </div>
 
-        <div className="flex flex-row gap-4 overflow-x-scroll px-5 md:px-24 [&::-webkit-scrollbar]:hidden">
-          {products.map((product) => (
-            <ProductItem key={product.id} product={product} />
-          ))}
-        </div>
+        <DynamicProductRow products={products} />
       </section>
     </>
   );
