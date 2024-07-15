@@ -10,16 +10,19 @@ interface ProductItemProps {
 const ProductItem = ({ product }: ProductItemProps) => {
   return (
     <>
-      <div className="flex min-w-[210px] max-w-[210px] flex-col gap-5">
+      <div className="flex h-full w-full flex-col gap-5">
         {/* Image */}
-        <div className="relative flex min-h-[210px] w-full min-w-[210px] items-center justify-center rounded-lg bg-muted">
-          <Badge className="absolute left-2 top-2 flex max-h-5 flex-row p-2">
-            <ArrowDownIcon size={16} />
+        <div className="relative flex h-full w-full items-center justify-center rounded-lg bg-muted p-[15%]">
+          {/* Bagde */}
+          {product.discountPercentage > 0 && (
+            <Badge className="absolute left-2 top-2 flex max-h-5 flex-row p-2">
+              <ArrowDownIcon size={16} />
 
-            <p>{product.discountPercentage}</p>
+              <p>{product.discountPercentage}</p>
 
-            <PercentIcon size={16} />
-          </Badge>
+              <PercentIcon size={16} />
+            </Badge>
+          )}
 
           <Image
             src={product.imageUrls[0]}
@@ -28,7 +31,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
             height={0}
             sizes="100vw"
             priority
-            className="h-auto w-full max-w-[80%]"
+            className="h-auto w-full"
           />
         </div>
 
