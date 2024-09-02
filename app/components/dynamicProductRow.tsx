@@ -1,7 +1,7 @@
 "use client";
 
 import { Product } from "@prisma/client";
-import ProductItem from "./productItem";
+import ProductItem from "./ProductItem";
 import { useEffect, useState } from "react";
 import { useScreenSize } from "../helpers/useScreenSize";
 
