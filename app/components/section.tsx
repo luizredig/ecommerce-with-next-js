@@ -2,7 +2,7 @@ import { Product } from "@prisma/client";
 import { Button } from "./ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
-import DynamicProductRow from "./dynamicProductRow";
+import DynamicProductRow from "./DynamicProductRow";
 
 interface SectionProps {
   title: string;

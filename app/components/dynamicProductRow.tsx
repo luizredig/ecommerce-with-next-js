@@ -1,9 +1,9 @@
 "use client";
 
 import { Product } from "@prisma/client";
-import ProductItem from "./ProductItem";
 import { useEffect, useState } from "react";
 import { useScreenSize } from "../helpers/useScreenSize";
+import ProductItem from "./ProductItem";
 
 interface DynamicProductRowProps {
   products: Product[];

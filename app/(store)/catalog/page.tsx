@@ -1,7 +1,7 @@
 import { Badge } from "@/app/components/ui/badge";
 import { prismaClient } from "@/app/lib/prisma";
 import { GripIcon } from "lucide-react";
-import CatalogItem from "../components/catalogItem";
+import CatalogItem from "../components/CatalogItem";
 
 const Page = async () => {
   const categories = await prismaClient.category.findMany({});
