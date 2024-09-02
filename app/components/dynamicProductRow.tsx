@@ -3,7 +3,7 @@
 import { Product } from "@prisma/client";
 import { useEffect, useState } from "react";
 import { useScreenSize } from "../helpers/useScreenSize";
-import ProductItem from "./ProductItem";
+import ProductItem from "./productItem";
 
 interface DynamicProductRowProps {
   products: Product[];

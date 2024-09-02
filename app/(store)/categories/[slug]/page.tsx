@@ -1,4 +1,4 @@
-import ProductItem from "@/app/components/ProductItem";
+import ProductItem from "@/app/components/productItem";
 import { Badge } from "@/app/components/ui/badge";
 import { CATEGORY_ICON } from "@/app/constants/category-icon";
 import { prismaClient } from "@/app/lib/prisma";
