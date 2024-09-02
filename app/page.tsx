@@ -1,5 +1,5 @@
 import { prismaClient } from "./lib/prisma";
-import CategoryItem from "./components/categoryItem";
+import CategoryItem from "./components/CategoryItem";
 import Section from "./components/section";
 import Banner from "./components/banner";
 

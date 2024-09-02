@@ -11,7 +11,7 @@ const CategoryItem = ({ category }: CategoryItemProps) => {
   return (
     <>
       <Link
-        href={`/products/${category.slug}`}
+        href={`/categories/${category.slug}`}
         className="flex w-full items-center justify-center"
       >
         <Button
