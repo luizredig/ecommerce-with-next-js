@@ -10,5 +10,5 @@ export async function GET(_: any, { params }: { params: { slug: string } }) {
     },
   });
 
-  return NextResponse.json({ status: 200, data: product });
+  return NextResponse.json({ status: 200, product: product });
 }

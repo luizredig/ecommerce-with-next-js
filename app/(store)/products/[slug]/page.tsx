@@ -15,7 +15,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
     axios
       .get(`/api/product/slug/${slug}`)
       .then((response) => {
-        setProduct(response.data);
+        setProduct(response.data.product);
       })
       .catch((error) => {
         console.error("There was an error!", error);
@@ -23,8 +23,6 @@ const Page = ({ params }: { params: { slug: string } }) => {
   }, [slug]);
 
   const [currentPhotoIndex, setcurrentPhotoIndex] = useState(0);
-
-  console.log(product);
 
   return (
     <>
