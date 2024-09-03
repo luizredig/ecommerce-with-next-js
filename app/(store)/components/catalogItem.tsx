@@ -18,11 +18,11 @@ const CatalogItem = ({ category }: CatalogItemProps) => {
           <Image
             src={category.imageUrl}
             alt={category.name}
-            width={0}
-            height={0}
+            width={120}
+            height={120}
             sizes="100vw"
             priority
-            className="h-auto max-h-[70%] w-full max-w-[70%] object-contain"
+            className="object-contain"
           />
         </div>
 
