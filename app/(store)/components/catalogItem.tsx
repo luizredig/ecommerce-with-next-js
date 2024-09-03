@@ -10,7 +10,7 @@ const CatalogItem = ({ category }: CatalogItemProps) => {
   return (
     <>
       <Link
-        href={`/products/${category.slug}`}
+        href={`/categories/${category.slug}`}
         className="h-full max-h-64 min-h-52 w-full overflow-hidden rounded-xl"
       >
         {/* Image */}
