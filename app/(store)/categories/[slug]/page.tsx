@@ -35,7 +35,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="h-auto max-h-[286px] md:max-w-[180px]"
+              className="h-auto max-h-[286px] min-h-[286px] md:min-w-[180px] md:max-w-[180px]"
             >
               <ProductItem key={product.id} product={product} />
             </div>
