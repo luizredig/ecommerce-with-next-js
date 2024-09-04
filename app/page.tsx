@@ -24,6 +24,15 @@ const Home = async () => {
     take: 6,
   });
 
+  const speakers = await prismaClient.product.findMany({
+    where: {
+      category: {
+        slug: "speakers",
+      },
+    },
+    take: 6,
+  });
+
   return (
     <>
       <div className="mb-10 flex h-full flex-col gap-10">
@@ -79,6 +88,12 @@ const Home = async () => {
           src="/headsets-banner.png"
           alt="Até 55% de desconto em fones de ouvido!"
           className="flex h-auto w-full px-5 md:hidden"
+        />
+
+        <Section
+          title="Speakers"
+          products={speakers}
+          href="/categories/speakers"
         />
       </div>
     </>
