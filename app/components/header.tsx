@@ -48,7 +48,7 @@ const Header = () => {
 
           <Separator orientation="vertical" className="h-5 w-1 rounded-full" />
 
-          <Link href={"/products/deals"}>
+          <Link href={"/categories/deals"}>
             <p>Deals</p>
           </Link>
         </div>
