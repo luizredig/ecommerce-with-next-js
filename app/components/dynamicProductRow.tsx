@@ -31,7 +31,7 @@ const DynamicProductRow = ({ products }: DynamicProductRowProps) => {
   return (
     <>
       {selectedProducts.length > 0 && (
-        <div className="grid w-full grid-cols-2 grid-rows-3 gap-4 overflow-x-scroll px-5 sm:gap-8 md:flex md:max-h-[286px] md:px-24 [&::-webkit-scrollbar]:hidden">
+        <div className="grid h-fit w-full grid-cols-2 grid-rows-3 gap-4 overflow-x-scroll px-5 sm:gap-8 md:flex md:px-24 [&::-webkit-scrollbar]:hidden">
           {selectedProducts.map((product) => (
             <div
               key={product.id}
