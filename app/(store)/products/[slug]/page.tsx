@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Product } from "@prisma/client";
 import LoadingSpinner from "@/app/components/LoadingSpinner";
+import Section from "@/app/components/section";
 
 const Page = ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
@@ -48,15 +49,15 @@ const Page = ({ params }: { params: { slug: string } }) => {
   }
 
   return (
-    <div className="relative flex h-full w-full flex-row gap-3 px-24 py-10">
+    <div className="flex h-full w-full flex-col gap-3 md:flex-row md:px-24">
       {/* Left */}
-      <div className="flex h-full w-2/3 overflow-hidden rounded-xl bg-muted">
-        {/* Product's images */}
-        <div className="absolute flex flex-col gap-4 p-10">
+      <div className="relative flex h-full w-full overflow-hidden bg-muted py-24 md:w-2/3 md:rounded-xl md:py-0">
+        {/* Product's images for Desktop */}
+        <div className="hidden flex-row md:absolute md:flex md:flex-col md:gap-4 md:p-[3%]">
           {product.imageUrls.map((imageUrl, index) => (
             <Button
               key={imageUrl}
-              className={`flex h-[70px] w-[70px] rounded-xl bg-black hover:bg-black ${index === currentPhotoIndex ? "border-2 border-primary" : ""}`}
+              className={`flex rounded-xl bg-black hover:bg-black md:h-[70px] md:w-[70px] ${index === currentPhotoIndex ? "border-2 border-primary" : ""}`}
               onClick={() => {
                 setCurrentPhotoIndex(index);
                 setCurrentImageUrl(imageUrl);
@@ -84,17 +85,41 @@ const Page = ({ params }: { params: { slug: string } }) => {
             height={0}
             sizes="100vw"
             priority
-            className="h-auto w-full max-w-[50%] object-contain"
+            className="h-auto w-full max-w-[50%] object-contain md:max-w-[50%]"
           />
         </div>
       </div>
 
+      {/* Product's images for Mobile */}
+      <div className="flex h-[70px] w-full flex-row justify-between gap-4 px-5 md:hidden">
+        {product.imageUrls.map((imageUrl, index) => (
+          <Button
+            key={imageUrl}
+            className={`flex h-fit h-full w-full rounded-xl bg-black hover:bg-black ${index === currentPhotoIndex ? "border-2 border-primary" : ""}`}
+            onClick={() => {
+              setCurrentPhotoIndex(index);
+              setCurrentImageUrl(imageUrl);
+            }}
+          >
+            <Image
+              src={imageUrl}
+              alt={product.name}
+              width={0}
+              height={0}
+              sizes="100vw"
+              priority
+              className="h-auto w-full max-w-[70px] object-contain"
+            />
+          </Button>
+        ))}
+      </div>
+
       {/* Right */}
-      <div className="flex h-full w-1/3 flex-col gap-8 rounded-xl bg-muted p-10">
-        <p className="text-3xl">{product.name}</p>
+      <div className="flex h-full w-full flex-col gap-4 rounded-xl p-5 md:w-1/3 md:gap-8 md:bg-muted md:p-10">
+        <p className="text-xl md:text-3xl">{product.name}</p>
 
         <div className="flex flex-col rounded-xl">
-          <p className="text-3xl font-semibold">
+          <p className="text-xl font-semibold lg:text-3xl">
             {new Intl.NumberFormat("en-US", {
               style: "currency",
               currency: "USD",
@@ -117,10 +142,6 @@ const Page = ({ params }: { params: { slug: string } }) => {
               }).format(Number(product.basePrice))}
             </p>
           </div>
-        </div>
-
-        <div className="h-[100px] overflow-scroll p-0">
-          <p className="text-sm opacity-70">{product.description}</p>
         </div>
       </div>
     </div>
