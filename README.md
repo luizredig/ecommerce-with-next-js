@@ -1,11 +1,11 @@
 ## 🇺🇸 English
 
-Open [https://next-js-ecommerce-phi-lime.vercel.app/](https://next-js-ecommerce-phi-lime.vercel.app/) in your browser to view the application.
+🌐 Open <a href="https://next-js-ecommerce-phi-lime.vercel.app/" target="_blank" rel="noopener noreferrer">https://next-js-ecommerce-phi-lime.vercel.app/</a> in your browser to view the application.
 
-This is a **Next.js** project bootstrapped with `create-next-app`.
+🚀 This is a Next.js project bootstrapped with create-next-app.
 
 ## 🇧🇷 Português
 
-Abra [https://next-js-ecommerce-phi-lime.vercel.app/](https://next-js-ecommerce-phi-lime.vercel.app/) no seu navegador para visualizar a aplicação.
+🌐 Abra <a href="https://next-js-ecommerce-phi-lime.vercel.app/" target="_blank" rel="noopener noreferrer">https://next-js-ecommerce-phi-lime.vercel.app/</a> no seu navegador para visualizar a aplicação.
 
-Este é um projeto em **Next.js** inicializado com `create-next-app`.
+🚀 Este é um projeto em Next.js inicializado com create-next-app.
