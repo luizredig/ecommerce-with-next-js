@@ -31,7 +31,7 @@ const Header = () => {
               NEXT
             </span>
 
-            <span>Eccomerce</span>
+            <span>Ecommerce</span>
           </h1>
         </Link>
 
