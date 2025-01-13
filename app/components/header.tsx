@@ -1,11 +1,22 @@
-import { MenuIcon, ShoppingCartIcon, UserRoundIcon } from "lucide-react";
-import { Card } from "./ui/card";
-import { Button } from "./ui/button";
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
+"use client";
+
+import { MenuIcon } from "lucide-react";
+import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
+import AccountSheet from "./sheets/AccountSheet";
+import CartSheet from "./sheets/CartSheet";
+import { Button } from "./ui/button";
+import { Card } from "./ui/card";
 import { Separator } from "./ui/separator";
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 
 const Header = () => {
+  const { data: session, status } = useSession();
+
+  const handleLogin = () => {
+    signIn();
+  };
+
   return (
     <>
       <Card className="fixed z-10 flex h-20 w-full flex-row items-center justify-between rounded-none border-x-0 border-t-0 bg-background/85 px-5 backdrop-blur-lg backdrop-filter md:h-28 md:px-24">
@@ -53,35 +64,15 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="flex flex-row gap-3 sm:gap-7">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button
-                size={"icon"}
-                variant={"outline"}
-                className="hidden md:flex"
-              >
-                <UserRoundIcon />
-              </Button>
-            </SheetTrigger>
+        {status === "unauthenticated" ? (
+          <Button onClick={handleLogin}>Login</Button>
+        ) : (
+          <div className="flex flex-row gap-3 sm:gap-7">
+            <AccountSheet />
 
-            <SheetContent side={"right"}>
-              <SheetHeader>Your account</SheetHeader>
-            </SheetContent>
-          </Sheet>
-
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button size={"icon"} variant={"outline"}>
-                <ShoppingCartIcon />
-              </Button>
-            </SheetTrigger>
-
-            <SheetContent side={"right"}>
-              <SheetHeader>Your cart</SheetHeader>
-            </SheetContent>
-          </Sheet>
-        </div>
+            <CartSheet />
+          </div>
+        )}
       </Card>
     </>
   );
