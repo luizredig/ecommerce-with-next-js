@@ -37,13 +37,13 @@ const Home = async () => {
     <>
       <div className="mb-10 flex h-full flex-col gap-10">
         <Banner
-          src={"/mobile-first-banner.png"}
+          src={"/banners/mobile-first-banner.png"}
           alt="Até 55% de desconto só este mês."
           className="flex h-auto w-full px-5 pt-5 md:hidden"
         />
 
         <Banner
-          src={"/desktop-first-banner.png"}
+          src={"/banners/desktop-first-banner.png"}
           alt="Ofertas imperdíveis! Até 55% de desconto só este mês."
           className="hidden h-auto w-full md:flex"
         />
@@ -60,13 +60,13 @@ const Home = async () => {
 
         <div className="flex w-full flex-row gap-9 px-5 md:px-24">
           <Banner
-            src="/mouses-banner.png"
+            src="/banners/mouses-banner.png"
             alt="Até 55% de desconto em mouses!"
             className="flex h-auto w-full md:w-1/2"
           />
 
           <Banner
-            src="/headsets-banner.png"
+            src="/banners/headsets-banner.png"
             alt="Até 55% de desconto em fones!"
             className="hidden h-auto w-1/2 md:flex"
           />
@@ -79,13 +79,13 @@ const Home = async () => {
         />
 
         <Banner
-          src="/delivery-banner.png"
+          src="/banners/delivery-banner.png"
           alt="Frete grátis para todo o Brasil!"
           className="hidden h-auto w-full px-5 md:flex md:px-24"
         />
 
         <Banner
-          src="/headsets-banner.png"
+          src="/banners/headsets-banner.png"
           alt="Até 55% de desconto em fones de ouvido!"
           className="flex h-auto w-full px-5 md:hidden"
         />
