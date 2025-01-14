@@ -1,14 +1,13 @@
 "use client";
 
-import { MenuIcon } from "lucide-react";
 import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import AccountSheet from "./sheets/AccountSheet";
 import CartSheet from "./sheets/CartSheet";
+import MenuSheet from "./sheets/MenuSheet";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Separator } from "./ui/separator";
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
 
 const Header = () => {
   const { data: session, status } = useSession();
@@ -20,21 +19,7 @@ const Header = () => {
   return (
     <>
       <Card className="fixed z-10 flex h-20 w-full flex-row items-center justify-between rounded-none border-x-0 border-t-0 bg-background/85 px-5 backdrop-blur-lg backdrop-filter md:h-28 md:px-24">
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button
-              size={"icon"}
-              variant={"outline"}
-              className="flex md:hidden"
-            >
-              <MenuIcon />
-            </Button>
-          </SheetTrigger>
-
-          <SheetContent side={"left"}>
-            <SheetHeader>Menu</SheetHeader>
-          </SheetContent>
-        </Sheet>
+        <MenuSheet />
 
         <Link href={"/"}>
           <h1 className="flex select-none flex-row items-center justify-center gap-1 text-lg font-semibold">
