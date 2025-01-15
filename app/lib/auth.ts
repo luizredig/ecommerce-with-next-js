@@ -1,5 +1,6 @@
 import { prismaClient } from "@/app/lib/prisma";
 import { PrismaAdapter } from "@auth/prisma-adapter";
+import { Facebook } from "lucide-react";
 import { AuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 

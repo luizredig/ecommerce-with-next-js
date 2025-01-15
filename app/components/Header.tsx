@@ -49,7 +49,7 @@ const Header = () => {
           </Link>
         </div>
 
-        {status === "unauthenticated" ? (
+        {status !== "authenticated" ? (
           <Button onClick={handleLogin}>Login</Button>
         ) : (
           <div className="flex flex-row gap-3 sm:gap-7">

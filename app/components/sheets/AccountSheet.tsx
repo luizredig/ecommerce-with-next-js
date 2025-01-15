@@ -1,6 +1,6 @@
 import { AvatarFallback } from "@radix-ui/react-avatar";
-import { UserRoundIcon, XIcon } from "lucide-react";
-import { useSession } from "next-auth/react";
+import { LogOutIcon, UserRoundIcon, XIcon } from "lucide-react";
+import { signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
@@ -11,9 +11,14 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { Card } from "../ui/card";
+import { Separator } from "../ui/separator";
 
 const AccountSheet = () => {
   const { data: session } = useSession();
+
+  const handleLogOut = async () => {
+    signOut();
+  };
 
   return (
     <Sheet>
@@ -45,21 +50,44 @@ const AccountSheet = () => {
           <DropdownMenu>
             {session && session.user && (
               <DropdownMenuTrigger className="flex w-full">
-                <div className="flex h-full w-full">
+                <div className="flex h-full w-full gap-2">
                   <Avatar className="flex h-16 w-16">
                     {session.user.image && (
-                      <AvatarImage src={session.user.image} />
+                      <>
+                        <AvatarImage src={session.user.image} />
+                      </>
                     )}
 
                     <AvatarFallback>
                       {session.user.name && session.user.name[0]}
                     </AvatarFallback>
                   </Avatar>
+
+                  <div className="flex flex-1 items-center gap-4">
+                    <Separator
+                      orientation={"vertical"}
+                      className="h-2/3 w-[2px] rounded-full bg-primary"
+                    />
+
+                    <div className="flex flex-1 items-center">
+                      <p>{session.user.name}</p>
+                    </div>
+                  </div>
                 </div>
               </DropdownMenuTrigger>
             )}
 
-            <DropdownMenuContent></DropdownMenuContent>
+            <DropdownMenuContent className="flex flex-col bg-muted">
+              <Button
+                variant={"ghost"}
+                onClick={handleLogOut}
+                className="flex gap-2"
+              >
+                <LogOutIcon size={16} />
+
+                <p>Logout</p>
+              </Button>
+            </DropdownMenuContent>
           </DropdownMenu>
         </Card>
       </SheetContent>
