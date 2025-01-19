@@ -1,18 +1,10 @@
 "use client";
 
-import { CartContext } from "@/app/components/providers/CartProvider";
 import { Button } from "@/app/components/ui/button";
 import { CheckCircleIcon } from "lucide-react";
 import Link from "next/link";
-import { useContext, useEffect } from "react";
 
 const Page = () => {
-  const { clearCart } = useContext(CartContext);
-
-  useEffect(() => {
-    clearCart();
-  }, [clearCart]);
-
   return (
     <div className="flex h-full items-center justify-center">
       <div className="text-center">
