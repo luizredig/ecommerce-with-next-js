@@ -150,7 +150,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
 
   const clearCart = () => {
     setProducts([]);
-    localStorage.removeItem("@cart-products");
+    localStorage.setItem("@cart-products", "[]");
   };
 
   if (products === null) {
