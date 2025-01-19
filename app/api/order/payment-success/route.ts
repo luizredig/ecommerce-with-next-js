@@ -21,9 +21,14 @@ export const POST = async (request: Request) => {
   );
 
   if (event.type === "checkout.session.completed") {
-    const session = event.data.object as Stripe.Checkout.Session;
+    const sessionWithLineItems = await stripe.checkout.sessions.retrieve(
+      event.data.object.id,
+      { expand: ["line_items"] },
+    );
 
-    console.log("Payment was successful", session);
+    const lineItems = sessionWithLineItems.line_items;
+
+    console.log("Line items", lineItems);
   }
 
   return NextResponse.json({ received: true });
