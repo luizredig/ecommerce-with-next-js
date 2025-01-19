@@ -27,7 +27,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
           >
             {CATEGORY_ICON[slug as keyof typeof CATEGORY_ICON]}
 
-            <p className="uppercase">{slug}</p>
+            <p className="px-2 font-semibold uppercase">{slug}</p>
           </Badge>
         </div>
 

@@ -13,7 +13,7 @@ const Page = async () => {
           variant={"outline"}
           className="flex w-fit flex-row items-center justify-center gap-1 border-2 border-primary py-1"
         >
-          <GripIcon />
+          <GripIcon size={16} />
 
           <p className="px-2 font-semibold uppercase">Catalog</p>
         </Badge>
