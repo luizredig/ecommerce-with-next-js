@@ -2,12 +2,12 @@
 
 import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
-import AccountSheet from "./sheets/AccountSheet";
-import CartSheet from "./sheets/CartSheet";
-import MenuSheet from "./sheets/MenuSheet";
-import { Button } from "./ui/button";
-import { Card } from "./ui/card";
-import { Separator } from "./ui/separator";
+import AccountSheet from "../../components/sheets/AccountSheet";
+import CartSheet from "../../components/sheets/CartSheet";
+import MenuSheet from "../../components/sheets/MenuSheet";
+import { Button } from "../../components/ui/button";
+import { Card } from "../../components/ui/card";
+import { Separator } from "../../components/ui/separator";
 
 const Header = () => {
   const { data: session, status } = useSession();

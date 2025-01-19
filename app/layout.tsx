@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Header from "./(store)/components/Header";
 import { AuthProvider } from "./components/providers/AuthProvider";
-import "./globals.css";
 import CartProvider from "./components/providers/CartProvider";
+import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,8 +29,6 @@ export default function RootLayout({
               <Header />
 
               <div className="flex-1 pt-20 md:pt-16">{children}</div>
-
-              {/* <Footer /> */}
             </CartProvider>
           </AuthProvider>
         </main>
