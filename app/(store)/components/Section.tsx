@@ -1,8 +1,8 @@
 import { Product } from "@prisma/client";
-import { Button } from "./ui/button";
+import { Button } from "../../components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
-import ProductRow from "../(store)/components/product/ProductRow";
+import ProductRow from "./product/ProductRow";
 
 interface SectionProps {
   title: string;

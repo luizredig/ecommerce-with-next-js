@@ -1,6 +1,6 @@
-import Banner from "./components/Banner";
+import Banner from "./(store)/components/Banner";
 import CategoryItem from "./(store)/components/category/CategoryItem";
-import Section from "./components/Section";
+import Section from "./(store)/components/Section";
 import { prismaClient } from "./lib/prisma";
 
 const Home = async () => {
