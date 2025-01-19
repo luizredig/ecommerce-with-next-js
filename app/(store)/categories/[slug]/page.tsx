@@ -19,7 +19,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <div className="flex h-full w-full flex-col gap-8 py-8">
+      <div className="flex h-full w-full flex-col gap-8 py-5">
         <div className="flex w-full px-5 md:px-24">
           <Badge
             variant={"outline"}
