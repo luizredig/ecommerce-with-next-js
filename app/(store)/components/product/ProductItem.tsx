@@ -1,21 +1,21 @@
 import { Product } from "@prisma/client";
-import Image from "next/image";
-import { Badge } from "./ui/badge";
 import { ArrowDownIcon, PercentIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { Badge } from "../../../components/ui/badge";
+import { cn } from "../../../lib/utils";
 
 interface ProductItemProps {
   product: Product;
+  className?: string;
 }
 
-const ProductItem = ({ product }: ProductItemProps) => {
+const ProductItem = ({ product, className }: ProductItemProps) => {
   return (
     <>
       <Link href={`/products/${product.slug}`}>
-        <div className="flex h-full w-full flex-col gap-5">
-          {/* Image */}
+        <div className={cn("flex h-full w-full flex-col gap-5", className)}>
           <div className="relative flex h-full w-full items-center justify-center rounded-lg bg-muted p-[15%]">
-            {/* Bagde */}
             {product.discountPercentage > 0 && (
               <Badge className="absolute left-2 top-2 flex max-h-5 flex-row p-2">
                 <ArrowDownIcon size={16} />
@@ -37,7 +37,6 @@ const ProductItem = ({ product }: ProductItemProps) => {
             />
           </div>
 
-          {/* Info */}
           <div>
             <p className="truncate font-light">{product.name}</p>
 

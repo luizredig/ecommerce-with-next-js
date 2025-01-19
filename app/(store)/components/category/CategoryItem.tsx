@@ -1,6 +1,6 @@
 import { Category } from "@prisma/client";
-import { CATEGORY_ICON } from "../constants/category-icon";
-import { Button } from "./ui/button";
+import { CATEGORY_ICON } from "../../../constants/category-icon";
+import { Button } from "../../../components/ui/button";
 import Link from "next/link";
 
 interface CategoryItemProps {

@@ -2,7 +2,7 @@ import { Product } from "@prisma/client";
 import { Button } from "./ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
-import DynamicProductRow from "./dynamicProductRow";
+import ProductRow from "../(store)/components/product/ProductRow";
 
 interface SectionProps {
   title: string;
@@ -13,8 +13,8 @@ interface SectionProps {
 const Section = ({ title, products, href }: SectionProps) => {
   return (
     <>
-      <section className="flex w-full flex-col gap-5">
-        <div className="flex flex-row items-center justify-between px-5 md:px-24">
+      <section className="flex w-full flex-col gap-5 px-5 md:px-24">
+        <div className="flex flex-row items-center justify-between">
           <p className="text-xl font-bold uppercase">{title}</p>
 
           <Link href={href}>
@@ -26,7 +26,7 @@ const Section = ({ title, products, href }: SectionProps) => {
           </Link>
         </div>
 
-        <DynamicProductRow products={products} />
+        <ProductRow products={products} />
       </section>
     </>
   );

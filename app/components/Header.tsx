@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <>
-      <Card className="fixed z-10 flex h-20 w-full flex-row items-center justify-between rounded-none border-x-0 border-t-0 bg-background/85 px-5 backdrop-blur-lg backdrop-filter md:h-28 md:px-24">
+      <Card className="fixed z-10 flex h-20 w-full flex-row items-center justify-between rounded-none border-x-0 border-t-0 bg-background/85 px-5 backdrop-blur-lg backdrop-filter md:h-28 md:max-h-16 md:px-24">
         <MenuSheet />
 
         <Link href={"/"}>
@@ -49,8 +49,10 @@ const Header = () => {
           </Link>
         </div>
 
-        {status !== "authenticated" ? (
-          <Button onClick={handleLogin}>Login</Button>
+        {status === "loading" || status === "unauthenticated" ? (
+          <Button onClick={handleLogin} size={"sm"}>
+            Login
+          </Button>
         ) : (
           <div className="flex flex-row gap-3 sm:gap-7">
             <AccountSheet />
