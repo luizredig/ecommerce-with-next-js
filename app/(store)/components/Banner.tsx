@@ -1,5 +1,5 @@
+import { cn } from "@/app/lib/utils";
 import Image from "next/image";
-import { cn } from "../lib/utils";
 
 interface BannerProps {
   src: string;
