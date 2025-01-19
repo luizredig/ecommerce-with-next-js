@@ -1,6 +1,6 @@
-import Banner from "./components/banner";
-import CategoryItem from "./components/categoryItem";
-import Section from "./components/section";
+import Banner from "./components/Banner";
+import CategoryItem from "./(store)/components/category/CategoryItem";
+import Section from "./components/Section";
 import { prismaClient } from "./lib/prisma";
 
 const Home = async () => {
@@ -58,17 +58,17 @@ const Home = async () => {
 
         <Section title="Deals" products={deals} href="/categories/deals" />
 
-        <div className="flex w-full flex-row gap-9 px-5 md:px-24">
+        <div className="flex w-full flex-row justify-between px-5 md:px-24">
           <Banner
             src="/banners/mouses-banner.png"
             alt="Até 55% de desconto em mouses!"
-            className="flex h-auto w-full md:w-1/2"
+            className="flex h-auto w-full md:w-[49%]"
           />
 
           <Banner
             src="/banners/headsets-banner.png"
             alt="Até 55% de desconto em fones!"
-            className="hidden h-auto w-1/2 md:flex"
+            className="hidden h-auto w-[49%] md:flex"
           />
         </div>
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { AuthProvider } from "./components/providers/AuthProvider";
 import "./globals.css";
@@ -29,9 +29,9 @@ export default function RootLayout({
             <CartProvider>
               <Header />
 
-              <div className="flex-1 pt-20 md:pt-28">{children}</div>
+              <div className="flex-1 pt-20 md:pt-16">{children}</div>
 
-              <Footer />
+              {/* <Footer /> */}
             </CartProvider>
           </AuthProvider>
         </main>
